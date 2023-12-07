@@ -23,6 +23,7 @@ public class App {
     }
 
     public static int nombreAleatoire() {
+        //Génére un nombre aléatoire dans nb et le retourne
         Random generateur = new Random();
         int nb = generateur.nextInt(6) + 1;
         return nb;
@@ -37,6 +38,7 @@ public class App {
     }
 
     public static void caseActuelle(int caseActuelle,int nb, int i){
+        //Print la phrase qui permet de savoir combien de lancer le joueur à fait, sur quelle case il est et combien lui reste t'il de case pour gagner
             System.out.println("Lancer " + (i + 1) + " : vous avez faits " + nb + ". Vous êtes sur la case "
                     + caseActuelle + " (encore " + (20 - caseActuelle) + ")");
     }
