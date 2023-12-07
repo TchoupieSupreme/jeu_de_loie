@@ -4,16 +4,15 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class App {
-
+    
     public static void main(String[] args) {
         int caseActuelle = 0;
         Scanner clavier = new Scanner(System.in);
         for (int i = 0; i < 5; i++) {
             int nb = nombreAleatoire();
-            clavier.nextLine();
             caseActuelle += nb;
-            System.out.println("Lancer " + (i + 1) + " : vous avez faits " + nb + ". Vous êtes sur la case "
-                    + caseActuelle + " (encore " + (20 - caseActuelle) + ")");
+            clavier.nextLine();
+            caseActuelle(caseActuelle,nb,i);
         }
         if (20 - caseActuelle == 0) {
             win();
@@ -35,6 +34,11 @@ public class App {
 
     public static void lose(){
         System.out.println("Vous avez perdu !");
+    }
+
+    public static void caseActuelle(int caseActuelle,int nb, int i){
+            System.out.println("Lancer " + (i + 1) + " : vous avez faits " + nb + ". Vous êtes sur la case "
+                    + caseActuelle + " (encore " + (20 - caseActuelle) + ")");
     }
 
 }
